@@ -9,7 +9,7 @@ var respecConfig =
   [
     {
       name:       "Elisabeth Klören",
-      company:    "Crow",
+      company:    "CROW",
       companyURL: "https://www.crow.nl"
     },
     {
