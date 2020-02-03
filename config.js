@@ -37,7 +37,7 @@ var respecConfig =
   editors:
   [
     {
-      name:       "Elisabeth Kloren",
+      name:       "Elisabeth Klören",
       company:    "Crow",
       companyURL: "https://www.crow.nl"
     },
@@ -62,7 +62,7 @@ var respecConfig =
       companyURL: "http://www.braindex.nl"
     },
     {
-      name:       "Mischel Bohms",
+      name:       "Michel Böhms",
       company:    "TNO",
       companyURL: "https://www.tno.nl"
     },
