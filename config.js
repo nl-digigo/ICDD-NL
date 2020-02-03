@@ -54,5 +54,4 @@ var respecConfig =
    
   }
 
- maxTocLevel: 3,                           // Aantal niveau's ToC, default is 0
 };
