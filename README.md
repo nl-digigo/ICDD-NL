@@ -2,7 +2,7 @@
 
 Repository voor het opstellen van Best Practices rondom de volgende versie van Gegevensuitwisseling.
 
-De best practices zijn in 'respec formaat' te lezen op: [https://bimloket.github.io/COINS-3.0-ICDD/](https://bimloket.github.io/COINS-3.0-ICDD/)
+__De best practices zijn in 'respec formaat' te lezen op: [https://bimloket.github.io/COINS-3.0-ICDD/](https://bimloket.github.io/COINS-3.0-ICDD/)__
 
 ## Doel en Resultaat
 
