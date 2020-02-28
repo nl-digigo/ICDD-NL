@@ -18,4 +18,6 @@ In de NTA8035 wordt de turtle serialisatie gebruikt voor de voorbeelden en als p
 
 ## Hashing van encrypted documenten
 
+In de <a>ICDD</a> specificatie wordt in algemene termen gesproken over de mogelijkheid om documenten te encrypten met een hashing algorithme. Het BIM Loket stelt voor om te standaardiseren op SHA256 als best practice.
+
 ## Mate van Deeplinken
