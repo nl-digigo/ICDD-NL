@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:sh="http://www.w3.org/ns/shacl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://www.buildingbits.nl/icdd/validation/baseShacl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="http://www.buildingbits.nl/icdd/validation/baseShacl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://www.w3.org/ns/shacl#"/>
+    <owl:versionInfo>Created with TopBraid Composer</owl:versionInfo>
+    <owl:imports rdf:resource="http://topbraid.org/tosh"/>
+    <sh:entailment rdf:resource="http://www.w3.org/ns/shacl#Rules"/>
+  </owl:Ontology>
+  <sh:NodeShape rdf:ID="rule_subproperties">
+    <sh:targetClass rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <sh:rule>
+      <sh:SPARQLRule rdf:ID="SPARQLRule_subProperties">
+        <sh:prefixes rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+        <rdfs:label>SPARQLRule sub properties</rdfs:label>
+        <sh:construct>CONSTRUCT {
+    $this ?superProp ?value
+}
+WHERE {
+    ?prop &lt;http://www.w3.org/2000/01/rdf-schema#subPropertyOf&gt; ?superProp.&#xD;
+   $this ?prop ?value
+}</sh:construct>
+      </sh:SPARQLRule>
+    </sh:rule>
+    <rdfs:label>Class subproperties</rdfs:label>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:ID="rule_inverse_prop_1">
+    <rdfs:label>rule inverse prop</rdfs:label>
+    <sh:rule>
+      <sh:SPARQLRule rdf:ID="SPARQLRule_inverseProp">
+        <sh:construct>CONSTRUCT {&#xD;
+?value  ?inverseProp  $this&#xD;
+}&#xD;
+WHERE {&#xD;
+    ?prop (&lt;http://www.w3.org/2002/07/owl#inverseOf&gt;|^&lt;http://www.w3.org/2002/07/owl#inverseOf&gt;) ?inverseProp.&#xD;
+   $this ?prop ?value&#xD;
+}</sh:construct>
+        <rdfs:label>SPARQLRule inverse prop</rdfs:label>
+      </sh:SPARQLRule>
+    </sh:rule>
+    <sh:targetClass rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </sh:NodeShape>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

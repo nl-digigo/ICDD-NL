@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:sh="http://www.w3.org/ns/shacl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:dash="http://datashapes.org/dash#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="https://standards.iso.org/iso/21597/-1/ed-1/en/Container.shapes">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container"/>
+    <owl:imports rdf:resource="http://datashapes.org/dash"/>
+  </owl:Ontology>
+  <sh:NodeShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#SecuredDocument">
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#SecuredDocument-checksum">
+        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#checksum"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:maxCount>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#SecuredDocument-checksumAlgorithm">
+        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#checksumAlgorithm"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:maxCount>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#FolderDocument">
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#FolderDocument-foldername">
+        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#foldername"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:maxCount>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#EncryptedDocument">
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#EncryptedDocument-encryptionAlgorithm">
+        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#encryptionAlgorithm"/>
+        <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ExternalDocument">
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ExternalDocument-url">
+        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#url"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:maxCount>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#InternalDocument">
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#InternalDocument-filename">
+        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#filename"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:maxCount>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#InternalDocument-filetype">
+        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#filetype"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:maxCount>
+      </sh:PropertyShape>
+    </sh:property>
+    <sh:property>
+      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#InternalDocument-belongsToContainer">
+        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#belongsToContainer"/>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:minCount>
+        <sh:class>
+          <sh:NodeShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription">
+            <sh:property>
+              <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription-priorVersion">
+                <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#priorVersion"/>
+                <sh:class rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription"/>
+                <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                >0</sh:minCount>
+              </sh:PropertyShape>
+            </sh:property>
+            <sh:property>
+              <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription-createdBy">
+                <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#createdBy"/>
+                <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                >0</sh:minCount>
+                <sh:class>
+                  <sh:NodeShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Party">
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Party-name">
+                        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#name"/>
+                        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1</sh:minCount>
+                        <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1</sh:maxCount>
+                      </sh:PropertyShape>
+                    </sh:property>
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Party-modified">
+                        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#modified"/>
+                      </sh:PropertyShape>
+                    </sh:property>
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Party-created">
+                        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#created"/>
+                      </sh:PropertyShape>
+                    </sh:property>
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Party-published">
+                        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#published"/>
+                      </sh:PropertyShape>
+                    </sh:property>
+                  </sh:NodeShape>
+                </sh:class>
+              </sh:PropertyShape>
+            </sh:property>
+            <sh:property>
+              <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription-publishedBy">
+                <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#publishedBy"/>
+                <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                >1</sh:minCount>
+                <sh:class rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Party"/>
+                <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                >1</sh:maxCount>
+              </sh:PropertyShape>
+            </sh:property>
+            <sh:property>
+              <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription-checksumAlgorithm">
+                <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#checksumAlgorithm"/>
+                <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+              </sh:PropertyShape>
+            </sh:property>
+            <sh:property>
+              <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription-conformanceIndicator">
+                <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#conformanceIndicator"/>
+                <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                >1</sh:minCount>
+                <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                >1</sh:maxCount>
+              </sh:PropertyShape>
+            </sh:property>
+            <sh:property>
+              <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription-checksum">
+                <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#checksum"/>
+                <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+              </sh:PropertyShape>
+            </sh:property>
+            <sh:property>
+              <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription-containsLinkset">
+                <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#containsLinkset"/>
+                <sh:class>
+                  <sh:NodeShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Linkset">
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Linkset-filename">
+                        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#filename"/>
+                        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1</sh:minCount>
+                        <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1</sh:maxCount>
+                      </sh:PropertyShape>
+                    </sh:property>
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Linkset-nextVersion">
+                        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#nextVersion"/>
+                        <sh:class rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Linkset"/>
+                      </sh:PropertyShape>
+                    </sh:property>
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Linkset-priorVersion">
+                        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#priorVersion"/>
+                        <sh:class rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Linkset"/>
+                        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</sh:minCount>
+                      </sh:PropertyShape>
+                    </sh:property>
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Linkset-containedInContainer">
+                        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#containedInContainer"/>
+                        <sh:class rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription"/>
+                      </sh:PropertyShape>
+                    </sh:property>
+                  </sh:NodeShape>
+                </sh:class>
+              </sh:PropertyShape>
+            </sh:property>
+            <sh:property>
+              <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription-nextVersion">
+                <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#nextVersion"/>
+                <sh:class rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription"/>
+              </sh:PropertyShape>
+            </sh:property>
+            <sh:property>
+              <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription-containsDocument">
+                <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#containsDocument"/>
+                <sh:class>
+                  <sh:NodeShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Document">
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Document-nextVersion">
+                        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#nextVersion"/>
+                        <sh:class rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Document"/>
+                        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</sh:minCount>
+                      </sh:PropertyShape>
+                    </sh:property>
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Document-filetype">
+                        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#filetype"/>
+                        <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                      </sh:PropertyShape>
+                    </sh:property>
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Document-alternativeDocumentTo">
+                        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#alternativeDocumentTo"/>
+                        <sh:class rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Document"/>
+                      </sh:PropertyShape>
+                    </sh:property>
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Document-belongsToContainer">
+                        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#belongsToContainer"/>
+                        <sh:class rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription"/>
+                      </sh:PropertyShape>
+                    </sh:property>
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Document-alternativeDocument">
+                        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#alternativeDocument"/>
+                        <sh:class rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Document"/>
+                      </sh:PropertyShape>
+                    </sh:property>
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Document-format">
+                        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#format"/>
+                        <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                      </sh:PropertyShape>
+                    </sh:property>
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Document-priorVersion">
+                        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#priorVersion"/>
+                        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >0</sh:minCount>
+                        <sh:class rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Document"/>
+                      </sh:PropertyShape>
+                    </sh:property>
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Document-requested">
+                        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#requested"/>
+                        <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1</sh:maxCount>
+                      </sh:PropertyShape>
+                    </sh:property>
+                    <sh:property>
+                      <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#Document-name">
+                        <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#name"/>
+                        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1</sh:minCount>
+                        <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1</sh:maxCount>
+                      </sh:PropertyShape>
+                    </sh:property>
+                  </sh:NodeShape>
+                </sh:class>
+              </sh:PropertyShape>
+            </sh:property>
+            <sh:property>
+              <sh:PropertyShape rdf:about="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#ContainerDescription-description">
+                <sh:path rdf:resource="https://standards.iso.org/iso/21597/-1/ed-1/en/Container#description"/>
+                <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                >1</sh:maxCount>
+              </sh:PropertyShape>
+            </sh:property>
+          </sh:NodeShape>
+        </sh:class>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</sh:maxCount>
+      </sh:PropertyShape>
+    </sh:property>
+  </sh:NodeShape>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->
