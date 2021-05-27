@@ -1,8 +1,10 @@
-# COINS-3.0 Best Practices 
+# COINS-3.0 Documentatie 
 
-Repository voor het opstellen van Best Practices rondom de volgende versie van Gegevensuitwisseling.
+Repository voor het opstellen van documentatie over gegevensuitwisseling op basis van COINS / ICDD.
 
-__De best practices zijn in 'respec formaat' te lezen op: [https://bimloket.github.io/COINS-3.0-ICDD/](https://bimloket.github.io/COINS-3.0-ICDD/)__
+__De best practices zijn in 'respec formaat' te lezen op: [https://bimloket.github.io/COINS-3.0-ICDD/bestpractices](https://bimloket.github.io/COINS-3.0-ICDD/bestpractices/)__
+
+__De documentatie ten aanzien van validatie is in 'respec formaat' te lezen op: [https://bimloket.github.io/COINS-3.0-ICDD/validation](https://bimloket.github.io/COINS-3.0-ICDD/validation/)__
 
 ## Doel en Resultaat
 
