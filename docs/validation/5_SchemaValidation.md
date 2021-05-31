@@ -1,12 +1,12 @@
 # Schema validation using SHACL
 
 ## Strategy
-Different strategies can be used to implement schema validation of the index.rdf file and the linkset files. A 'plain' coding approach is very feasible. Using an implementation heavily using Sparql is very feasible. The usage of Shacl seems very logical as suggested by the standard. 
-This document explains how to jumpstart a Shacl based validation approach by using the descriptions of Linkset.rdf and Container.rdf in combination with the official documentation to describe the necessary rules for schema validation. 
+Different strategies can be used to implement schema validation of the index.rdf file and the linkset files. A 'plain' coding approach is very feasible. Using an implementation heavily using Sparql is also very feasible. Also the usage of Shacl seems very logical as suggested by the standard. 
+This document investigates how to jumpstart a Shacl based validation approach by using the descriptions of Linkset.rdf and Container.rdf in combination with the official documentation to describe the necessary rules for schema validation. 
 
 
 ## Inference
-Inferencing can be used as an implementation strategy. Without using inference you may need extra rules for validation or the individual validation rules might become more complex. Shacl supports entailment regimes but implementations are not required to support them. Given that ICDD redefines certain rdfs and owl definitions, only a small subset of rdfs and owl vocabulary remains that can used for inference 
+Inferencing can be used as an implementation strategy. Without using inference you may need extra rules for validation or the individual validation rules might become more complex. Shacl supports entailment regimes but implementations are not required to support them. Given that ICDD redefines certain rdfs and owl definitions, only a small subset of rdfs and owl vocabulary remains that can used for inference. 
 
 In case you want to use inference, the following rules can be applied. Arguably more rules can be used.
 
@@ -18,9 +18,9 @@ INF3| rdfs:subClassOf |  generate rdf:type predicates based upon rdfs:subClassOf
 INF4| owl:unionOf*| generate rdf:type predicates based upon owl:unionOf rdf:list
 INF5| owl:sameAs| copy predicates both ways. When sameAs constructs are available it is necessary that cardinality constraints take these constructs into account. 
 
-* The interpretation of owl:unionClass is unclear in the specification: The ICDD model contains properties with domain objects with blank nodes containing a owl:unionOf predicate. It can be recommended that owl:unionClass is interpreted following the owl specification. Arguably this would be in line with the conversion of rdfs:domain and rdfs:range as restrictions for testing purposes. This means individuals must be typed accordingly.
+*The interpretation of owl:unionClass is unclear in the specification: The ICDD model contains properties with domain objects with blank nodes containing a owl:unionOf predicate. It can be recommended that owl:unionClass is interpreted following the owl specification. Arguably this would be in line with the conversion of rdfs:domain and rdfs:range as restrictions for testing purposes. This means individuals must be typed accordingly.
 
-Shacl has advanced features which enables so-called sparql rules. These are rules based upon a Sparql construct query which are connected to a Shacl Shape. The following screenshot shows a sparql rule.This rule adds super property values to each resource that has a value for a subproperty. This rule is connected to a shape targeting owl:Thing. Arguably this can be further refined.
+Shacl has advanced features which enables so-called sparql rules. These are rules based upon a Sparql construct query which are connected to a Shacl Shape. The following screenshot shows a sparql rule. This rule adds superproperty values to each resource that has a value for a subproperty. This rule is connected to a shape targeting owl:Thing. Arguably the target class this can be further refined.
 
 <img src="./media/icdd/shacl_subpropertiesRule.png"
      alt="example Shacl inference rule for subproperties"
@@ -53,7 +53,7 @@ SHGen5| Disjoint check| check if individuals are not member of disjoint classes
 SHGen6| domain check | interpret domain as a restriction and consequently test if properties with a a domain are used by resources that are typed accordingly.*
 SHGen7| range check|  interpret range as a restriction and consequently test if the object of a property with a range is typed accordingly.
 
-* TopBraid's owl2shacl rule for domain checks also takes a unionclass construct into account. Inference rule 4 (INF4) can be disregarded in this case.
+*TopBraid's owl2shacl rule for domain checks also takes a unionclass construct into account. Inference rule 4 (INF4) can be disregarded in this case.
 
 <img src="./media/icdd/owl2shacl_domainrule.png"
      alt="Topbraid's owl2shacl rule for domain type checks taking unionClass into account"

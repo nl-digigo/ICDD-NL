@@ -6,14 +6,16 @@ The following list contains a set of validation checks regarding rdf files in th
 id   | description   |extra   |
 --- | --- | ---
 LD1|valid rdf files| validate if link datasets files are valid rdf*
-LD2|serialisation|check for allowed serialisations** rdf/xml,turtle,json-ld,trig,trix,n3, arguably not zipped versions,rdfa,binary versions ??
+LD2|serialisation|check for allowed serialisations**. 
 LD3|schema validation| check if this file is compliant with the Linkset.rdf file*
 LD4|only Linkset classes| no other individuals than individuals from classes defined in the LinkSet.rdf. For example make sure no other documents are defined in this file.***
 LD5|document check|check if all related documents are present in the index.rdf ***
 LD6|optional resolving element id's| check if id's can be found in the documents
 
 
-* more details on schema validation in the schema validation chapter
+*More details on schema validation in the schema validation chapter.
 
+**Very common serialisations are argubably rdf/xml,turtle and json-ld. Trig, trix, n3, zipped serialisation versions, rdfa, binary serialisation versions are arguably less common in this context. For the validations service it can be recommended to support at least rdf/xml,turtle and json-ld. 
 
-** not sure about this. Is it allowed to define 'previouse' documents in this dataset?
+***Link datasets use document references defined in Index.rdf. Link datasets must not contain extra document references.
+
