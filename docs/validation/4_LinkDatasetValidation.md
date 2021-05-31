@@ -1,7 +1,7 @@
 ## Link dataset validation
-Link datasets are listed in the index.rdf file and can be found in the 'payload triples' folder in an ICDD container. These link datasets must comply with the standard and consequently a set of checks can be developed.
+Link datasets are listed in the index.rdf file and can be found in the 'payload triples' folder in NEN-EN-ISO 21597-1:2020 containers. These link datasets must comply with the standard and consequently a set of checks can be developed.
 
-The following list contains a set of validation checks regarding rdf files in the 'Payload triples' folder of the container.
+The following list contains a set of validation checks regarding rdf files in the 'Payload triples' folder of a NEN-EN-ISO 21597-1:2020 container.
 
 id   | description   |extra   |
 --- | --- | ---

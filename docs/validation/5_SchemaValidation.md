@@ -12,7 +12,7 @@ In case you want to use inference, the following rules can be applied. Arguably 
 
 id   | inference  |description
 --- | --- | ---
-INF1|owl:subproperties| generate subproperty relations
+INF1| owl:subproperties| generate subproperty relations
 INF2| owl:inverseOf properties| generate triples on the inverse properties and ^inverse properties. This enables easy testing of these added relationships.
 INF3| rdfs:subClassOf |  generate rdf:type predicates based upon rdfs:subClassOf definitions
 INF4| owl:unionOf*| generate rdf:type predicates based upon owl:unionOf rdf:list
@@ -50,7 +50,14 @@ SHGen2| Object relations check |the norm uses domain and ranges as a constraint:
 SHGen3| Resource typing check | check if all resources are sufficiently typed. Make sure all resources are typed to minimal one non-blank valid Class
 SHGen4| Cardinality check|the norm uses owl cardinality as constraints: check cardinality and take owl:sameAs into account or skip it and report that it cannot perform these checks when owl:sameAs is present.
 SHGen5| Disjoint check| check if individuals are not member of disjoint classes
+SHGen6| domain check | interpret domain as a restriction and consequently test if properties with a a domain are used by resources that are typed accordingly.*
+SHGen7| range check|  interpret range as a restriction and consequently test if the object of a property with a range is typed accordingly.
 
+* TopBraid's owl2shacl rule for domain checks also takes a unionclass construct into account. Inference rule 4 (INF4) can be disregarded in this case.
+
+<img src="./media/icdd/owl2shacl_domainrule.png"
+     alt="Topbraid's owl2shacl rule for domain type checks taking unionClass into account"
+     style="width:70%;height:70%" />
 
 
 ## SHACL validation rules

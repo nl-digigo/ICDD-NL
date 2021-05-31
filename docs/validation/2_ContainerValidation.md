@@ -1,6 +1,6 @@
 # Container validation
 
-ICDD containers are zip64 files with a predefined folder structure. See the following picture for the ICDD container structure.
+NEN-EN-ISO 21597-1:2020 containers are zip64 files with a predefined folder structure. See the following picture for the NEN-EN-ISO 21597-1:2020 container structure.
 
 <img src="./media/icdd/containerstructure.png"
      alt="containerstructure"

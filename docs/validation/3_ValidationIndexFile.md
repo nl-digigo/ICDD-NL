@@ -1,5 +1,5 @@
 ## Index dataset validation
-The index.rdf file lists the documents that can be found in the container. This index.rdf must comply with the standard and consequently a list of checks can be developed.
+The index.rdf file lists the documents that can be found in NEN-EN-ISO 21597-1:2020 containers. This index.rdf must comply with the standard and consequently a list of checks can be developed.
 
 The following list contains a set of validation checks regarding for the index.rdf file within the container. 
 
