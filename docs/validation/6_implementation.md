@@ -7,7 +7,7 @@ Software libraries for implementing container structure checks are available. Fo
 
 
 ## SHACL implementations
-Various SHACL implementations are available. Implementation completeness and quality can vary. The following list gives examples of SHACL implementations.
+Various SHACL implementations are available. Implementation completeness and quality can vary. The following list gives a set of examples of SHACL implementations.
 
 id   | name   |url   |
 --- | --- | ---
@@ -19,7 +19,7 @@ id   | name   |url   |
 6|AnzoGraph|https://www.cambridgesemantics.com/
 
 
-Advanced features of Shacl are not always implemented. This means that for example rule execution could not be available and consequently should be implemented. The rules are relatively simple and based upon Sparql. Implementing these rules should be very feasible. 
+Advanced features of Shacl are not always implemented. This means that for example rule execution could not be available and consequently should be implemented. The rules are relatively simple and based upon Sparql. Implementing these rules should be very feasible when using software components that support Sparql. 
 
 
 

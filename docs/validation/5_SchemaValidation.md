@@ -24,7 +24,7 @@ Shacl has advanced features which enables so-called sparql rules. These are rule
 
 <img src="./media/icdd/shacl_subpropertiesRule.png"
      alt="example Shacl inference rule for subproperties"
-     style="width:70%;height:70%" />
+     style="width:95%;height:95%" />
 
 
 Another example is the inverse property rule where inverse properties are added. Multiple approaches to solve this are available. You could create a rule for setting inverseProperties. This means that when property A has an inverse property B than you could infer that property B has the inverse Property A. After this inference the actual values can be added to the dataset based upon inverse properties. Sequence of rule execution is very important and must be controlled. Another approach is to add inverse property values directly without inverse inference. The following screenshot gives an example of such a rule.
@@ -32,7 +32,7 @@ Another example is the inverse property rule where inverse properties are added.
 
 <img src="./media/icdd/shacl_inverseRule.png"
      alt="example Shacl inference rule for inverse properties"
-     style="width:70%;height:70%" />
+     style="width:95%;height:95%" />
 
 
 Regarding the two rules it is advisable to control the execution order of these rules. the Shacl property "order" takes an decimal value. Rules with smaller values will be executed first.
@@ -47,28 +47,37 @@ id   | validation   |description   |
 --- | --- | ---
 SHGen1| Datatype check| check if all datatype values have the correct datatype
 SHGen2| Object relations check |the norm uses domain and ranges as a constraint: check if the range and domain are valid for all object relations*  
-SHGen3| Resource typing check | check if all resources are sufficiently typed. Make sure all resources are typed to minimal one non-blank valid Class
+SHGen3| Resource typing check | check if all resources are sufficiently typed. Shacl rules can be generated using th owl:disjointUnionOf constructs in the ICDD ontologies to assure resources are sufficiently typed.  
 SHGen4| Cardinality check|the norm uses owl cardinality as constraints: check cardinality and take owl:sameAs into account or skip it and report that it cannot perform these checks when owl:sameAs is present.
 SHGen5| Disjoint check| check if individuals are not member of disjoint classes
-SHGen6| domain check | interpret domain as a restriction and consequently test if properties with a a domain are used by resources that are typed accordingly.*
-SHGen7| range check|  interpret range as a restriction and consequently test if the object of a property with a range is typed accordingly.
+SHGen6| domain check unionclass | interpret domain as a restriction and consequently test if properties with a a unionclass domain are used by resources that are typed accordingly.*
+SHGen7| range check unionclass|  interpret range as a restriction and consequently test if the object of a property with a unionclass range is typed accordingly.*
+SHGen8| qualified cardinality | check cardinality and class type (range) of a predicate 
+
 
 *TopBraid's owl2shacl rule for domain checks also takes a unionclass construct into account. Inference rule 4 (INF4) can be disregarded in this case.
 
 <img src="./media/icdd/owl2shacl_domainrule.png"
      alt="Topbraid's owl2shacl rule for domain type checks taking unionClass into account"
-     style="width:70%;height:70%" />
+     style="width:90%;height:90%" />
 
 
 ## SHACL validation rules
-Using the ICDD ontologies and the Shacl generating rules, a strong basis for a Shacl file for testing ICDD can be generated. After executing the sparql rules these shacl shapes can be used for testing ICDD containers. This paragraph gives examples of these SHACL shapes.
+Using the ICDD ontologies and the Shacl generating rules, a strong basis for a Shacl file for testing ICDD can be generated. The following picture shows a relevant set of owl2shape rules that is used for this document. Please note that this list is only for example purposes does not implement all necessary rules.
+
+<img src="./media/icdd/icdd2shaclRules.png"
+     alt="Topbraid's owl2shacl rules used for generating the shacl files"
+     style="width:90%;height:90%" />
+
+
+After executing the sparql rules these shacl shapes can be used for testing ICDD containers. This paragraph gives examples of these SHACL shapes.
 
 #### Datatype checks
 The following screenshot shows the generated Shacl property shape for testing 'document-name'.  This shape checks if the datatype is a string for this property. This shape also checks if this property is available (min cardinality is 1, max cardinality is 1)
 
 <img src="./media/icdd/shacl_datatype.png"
      alt="example Shacl datatype shape"
-     style="width:70%;height:70%" />
+     style="width:90%;height:90%" />
 
 
 #### Cardinality checks
@@ -76,7 +85,7 @@ The following screenshot shows the generated cardinality shape for BinaryLink. A
 
 <img src="./media/icdd/shacl_cardinality.png"
      alt="example Shacl cardinality shape"
-     style="width:70%;height:70%" />
+     style="width:90%;height:90%" />
 
 
 #### Domain & range checks
@@ -84,7 +93,7 @@ Domain and ranges are interpreted as restrictions in ICDD. This means that prope
 
 <img src="./media/icdd/shacl_range.png"
      alt="example Shacl ICDD range as restriction"
-     style="width:70%;height:70%" />
+     style="width:90%;height:90%" />
 
 
 #### Other checks
