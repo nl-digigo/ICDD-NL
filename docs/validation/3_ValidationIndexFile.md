@@ -1,7 +1,7 @@
 ## Index dataset validation
-The index.rdf file lists the documents that can be found in NEN-EN-ISO 21597-1:2020 containers. This index.rdf must comply with the standard and consequently a list of checks can be developed.
+The Index.rdf file lists the documents that can be found in NEN-EN-ISO 21597-1:2020 containers. This Index.rdf must comply with the standard. A checklist can be developed for this compliance.
 
-The following list contains a set of validation checks regarding for the index.rdf file within the container. 
+The following list contains a set of validation checks regarding the index.rdf file within the container. 
 
 id   | check   |description   |
 --- | --- | ---
@@ -19,5 +19,5 @@ ID10|existence link datasets| check if referred link datasets are available. Old
 
 *more details on schema validation in the schema validation chapter.
 
-**the standard mentions RDF/XML or any other equivalent RDF serialisations recommended by W3C can be used. Limiting the supported serialisations to rdf/xml,turtle and json-ld can be recommended for an ICDD validation service.  
+**the standard mentions XML or any other equivalent RDF serialisations recommended by W3C can be used. Limiting the supported serialisations to XML,turtle and json-ld can be recommended for an ICDD validation service.  
 
