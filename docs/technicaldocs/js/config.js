@@ -83,7 +83,7 @@ var respecConfig = {
     // subtitle: "Hier komt een subtitle",
   
     // specify format: "markdown" when multiple markdown files are included 
-    format: "markdown",                
+    // format: "markdown",                
   
     // The specification's "short name", which is the name used in NL_Respec URLs
     shortName: "ICDD",
