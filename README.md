@@ -13,7 +13,7 @@ Deze repository is bedoelt voor het vastleggen van issues en documenteren van Be
 
 Dit document beschrijft de Best Practices voor de combinatie van ICDD part 1 en NEN 2660 (in ontwikkeling)
 
-https://bimloket.github.io/COINS-3.0-ICDD/bestpracticeshttps://bimloket.github.io/COINS-3.0-ICDD/validation/
+https://bimloket.github.io/COINS-3.0-ICDD/bestpractices
 
 
 
