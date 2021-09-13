@@ -1,13 +1,30 @@
-# COINS-3.0 Documentatie 
+# COINS-3.0-ICDD 
 
-Repository voor het opstellen van documentatie over gegevensuitwisseling op basis van COINS / ICDD.
+Repository voor documentatie over gegevensuitwisseling op basis van COINS / ICDD, ook in combinatie met NEN 2660https://bimloket.github.io/COINS-3.0-ICDD/validation/
 
-__De best practices zijn in 'respec formaat' te lezen op: [https://bimloket.github.io/COINS-3.0-ICDD/bestpractices](https://bimloket.github.io/COINS-3.0-ICDD/bestpractices/)__
-
-__De documentatie ten aanzien van validatie is in 'respec formaat' te lezen op: [https://bimloket.github.io/COINS-3.0-ICDD/validation](https://bimloket.github.io/COINS-3.0-ICDD/validation/)__
-
+         
 ## Doel en Resultaat
 
-Gebruikers van COINS 2.0 hebben aangegeven te willen overstappen op ICDD part 1 in combinatie met de NTA 8035. Daarmee kunnen partijen kaartgegevens, data en documenten aan elkaar koppelen en als samenhangende informatie uitwisselen. ICDD is de Internationale opvolger van COINS 2.0. De NTA 8085 geeft regels voor ontologiën. Voor de praktische uitwerking van deze combinatie is een technische werksessie gepland met experts uit de expertgroepen van CB-NL en COINS.
+Gebruikerscommunity "COINS 3.0" heeft aangegeven te willen overstappen op ICDD part 1 in combinatie met de NEN 2660. Daarmee kunnen partijen kaartgegevens, data en documenten aan elkaar koppelen en als samenhangende informatie uitwisselen. ICDD is de Internationale opvolger van COINS 2.0. De NEN 2660 geeft regels voor ontologiën. 
 
 Deze repository is bedoelt voor het vastleggen van issues en documenteren van Best Practices rondom het toepassen van ICDD Part 1 en NTA8035
+
+## Best Practices
+
+Dit document beschrijft de Best Practices voor de combinatie van ICDD part 1 en NEN 2660 (in ontwikkeling)
+
+https://bimloket.github.io/COINS-3.0-ICDD/bestpracticeshttps://bimloket.github.io/COINS-3.0-ICDD/validation/
+
+
+
+## Container validation
+This document describes validation checks for NEN-EN-ISO 21597-1:2020 containers
+
+https://bimloket.github.io/COINS-3.0-ICDD/validation/
+
+
+## Technical documentation
+ This document describes importing and exporting NEN-EN-ISO 21597:2020 containers
+ 
+ https://bimloket.github.io/COINS-3.0-ICDD/technicaldocs/
+ 
