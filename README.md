@@ -1,3 +1,5 @@
+Dit onderwerp zal moeten worden opgepakt binnen het DSGO; DigiGO is niet de beheerder van de ICDD standaard, dat is ISO. Deze repository zal worden gearchiveerd.
+
 # COINS-3.0-ICDD 
 
 Repository voor documentatie over gegevensuitwisseling op basis van COINS / ICDD, ook in combinatie met NEN 2660 https://bimloket.github.io/ICDD-NL/validation/
